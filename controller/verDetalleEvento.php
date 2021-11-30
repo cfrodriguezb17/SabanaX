@@ -38,7 +38,7 @@
                                                         </ul>
                                                     </div>
                                                     <div class='date date-2'>
-                                                        <h4>".$fechaSeparada[2]."<span>".$monthsOfTheYear[$fechaSeparada[1]]."</span></h4>
+                                                        <h4>".$fechaSeparada[2]."<span>".$monthsOfTheYear[intval($fechaSeparada[1])]."</span></h4>
                                                     </div>
                                                 </div>
                                             </div>

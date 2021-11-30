@@ -80,6 +80,7 @@
     <div class="container">
       <form action="../../controller/crearEvento.php" method="POST" class="form-containerr row"
         enctype="multipart/form-data">
+        <input type="text" name="email" class="d-none"  value="<?php echo $_SESSION['email']?>">
         <div class="row col-md-6">
           <div class="img-thumbnail imgCreateEvent">
             <img class="imgCreate" src="../client-site/images/evento-1.png" alt="Imagen evento" id="blah">

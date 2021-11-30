@@ -1,15 +1,15 @@
 <?php
     class ConsultasUsuario{
 
-        public function registrarEvento($titulo, $municipio, $fecha, $hora, $descripcion, $costo, $categoria, $anunciar, $fileDestination){
+        public function registrarEvento($email, $titulo, $municipio, $fecha, $hora, $descripcion, $costo, $categoria, $anunciar, $fileDestination){
             
             $model = new conexion();
             $conexion = $model->get_conexion();
-
-            $insertBD = "INSERT INTO events (titulo, municipio, fecha, hora, descripcion, costo, categoria, anunciar, imagenEvento) VALUES (:titulo, :municipio, :fecha, :hora, :descripcion, :costo, :categoria, :anunciar, :imagenEvento)";
+$insertBD = "INSERT INTO events (emailUser, titulo, municipio, fecha, hora, descripcion, costo, categoria, anunciar, imagenEvento) VALUES (:email ,:titulo, :municipio, :fecha, :hora, :descripcion, :costo, :categoria, :anunciar, :imagenEvento)";
 
 
             $statement = $conexion->prepare($insertBD);
+            $statement->bindParam(':email', $email );
             $statement->bindParam(':titulo', $titulo );
             $statement->bindParam(':municipio', $municipio );
             $statement->bindParam(':fecha', $fecha );
